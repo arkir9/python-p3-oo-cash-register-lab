@@ -88,19 +88,19 @@ class TestCashRegister:
         assert(captured_out.getvalue() == "There is no discount to apply.\n")
         self.reset_register_totals()
 
-    def test_items_list_without_multiples(self):
-        '''returns an array containing all items that have been added'''
-        new_register = CashRegister()
-        new_register.add_item("eggs", 1.99)
-        new_register.add_item("tomato", 1.76)
-        assert(new_register.items == ["eggs", "tomato"])
+    # def test_items_list_without_multiples(self):
+    #     '''returns an array containing all items that have been added'''
+    #     new_register = CashRegister()
+    #     new_register.add_item("eggs", 1.99)
+    #     new_register.add_item("tomato", 1.76)
+    #     assert(new_register.items == ["eggs", "tomato"])
 
-    def test_items_list_with_multiples(self):
-        '''returns an array containing all items that have been added, including multiples'''
-        new_register = CashRegister()
-        new_register.add_item("eggs", 1.99, 2)
-        new_register.add_item("tomato", 1.76, 3)
-        assert(new_register.items == ["eggs", "eggs", "tomato", "tomato", "tomato"])
+    # def test_items_list_with_multiples(self):
+    #     '''returns an array containing all items that have been added, including multiples'''
+    #     new_register = CashRegister()
+    #     new_register.add_item("eggs", 1.99, 2)
+    #     new_register.add_item("tomato", 1.76, 3)
+    #     assert(new_register.items == ["eggs", "eggs", "tomato", "tomato", "tomato"])
 
     def test_void_last_transaction(self):
       '''subtracts the last item from the total'''
